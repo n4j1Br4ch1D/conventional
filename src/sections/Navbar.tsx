@@ -9,7 +9,7 @@ function Navbar() {
                     <div aria-label="Home. logo" role="img">
                        <Link href="/" className="flex items-center mb-4 sm:mb-0">
                            <img src={logo} className="mr-2 h-8" alt="Conventional Logo" />
-                           <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Conventional</span>
+                           <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Conventional</span>
                        </Link>
                     </div>
                     <div>

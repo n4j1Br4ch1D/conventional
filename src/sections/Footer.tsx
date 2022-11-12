@@ -8,7 +8,7 @@ function Footer() {
     <div className="sm:flex sm:items-center sm:justify-between">
         <Link href="/" className="flex items-center mb-4 sm:mb-0">
             <img src={logo} className="mr-2 h-8" alt="Conventional Logo" />
-            <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Conventional</span>
+            <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Conventional</span>
         </Link>
         <ul className="flex flex-wrap items-center mb-6 text-sm text-gray-500 sm:mb-0 dark:text-gray-400">
             <li>
