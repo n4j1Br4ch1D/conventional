@@ -1,5 +1,5 @@
 import { Link } from 'raviger'
-// import logo from './imgs/logo.svg';
+import logo from './../imgs/conventional-logo.svg';
 
 function Navbar() {
   return (
@@ -8,7 +8,7 @@ function Navbar() {
                 <div className="py-5 md:py-0 container mx-auto px-6 flex items-center justify-between">
                     <div aria-label="Home. logo" role="img">
                        <Link href="/" className="flex items-center mb-4 sm:mb-0">
-                           <img src="https://flowbite.com/docs/images/logo.svg" className="mr-3 h-8" alt="Conventional Logo" />
+                           <img src={logo} className="mr-2 h-8" alt="Conventional Logo" />
                            <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Conventional</span>
                        </Link>
                     </div>
