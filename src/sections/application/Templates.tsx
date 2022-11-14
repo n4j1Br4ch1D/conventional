@@ -5,7 +5,16 @@ function Templates() {
       title: 'Xbank project',
       screenshot: 'view.png',
       description: 'the XBank new edition 2022',
-      technologies: ['php', 'laravel', 'tailwindcss'],
+      technologies: [
+        'PHP',
+        'Vuejs',
+        'Laravel',
+        'Bootstrap5',
+        'SASS',
+        'Typescript',
+        'HTML5',
+        'SVG',
+      ],
       owner_id: 1,
       created_at: '',
       updated_at: '',
@@ -44,15 +53,11 @@ function Templates() {
 
   /*
 
-// loop
-
 // get filters
 
 // search & filter elems
 
-
-
-  */
+*/
 
   return (
     <div className="templates">
@@ -77,302 +82,33 @@ function Templates() {
       </header>
 
       <div className="grid grid-cols-4 gap-4">
-        <div className="flex justify-center">
-          <div className="border border-gray-300 rounded-md shadow-md bg-white w-full max-w-sm">
-            <div className="p-2 bg-gray-300">
-              <img className="rounded-md" src="img/templates/view.png" alt="" />
+        {templates.map((template) => {
+          return (
+            <div key={template.id} className="flex justify-center">
+              <div className="border border-gray-300 rounded-md shadow-md bg-white w-full max-w-sm">
+                <div className="p-2 bg-gray-300">
+                  <img
+                    className="rounded-md"
+                    src={'img/templates/' + template.screenshot}
+                    alt={template.title}
+                  />
+                </div>
+                <div className="p-3">
+                  <h5 className="text-gray-900 text-xl font-medium mb-2">
+                    {template.title}
+                  </h5>
+                  {template.technologies.map((technology) => {
+                    return (
+                      <span className="inline-block bg-gray-500 text-purple-100 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-purple-200 dark:text-purple-900">
+                        {technology}
+                      </span>
+                    );
+                  })}
+                </div>
+              </div>
             </div>
-            <div className="p-3">
-              <h5 className="text-gray-900 text-xl font-medium mb-2">
-                Xbank project
-              </h5>
-
-              <span className="bg-purple-100 text-purple-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-purple-200 dark:text-purple-800">
-                PHP
-              </span>
-              <span className="bg-gray-100 text-gray-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">
-                Vuejs
-              </span>
-              <span className="bg-red-100 text-red-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-red-200 dark:text-red-900">
-                Laravel
-              </span>
-              <span className="bg-green-100 text-green-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-green-200 dark:text-green-900">
-                Bootstrap5
-              </span>
-              <span className="bg-yellow-100 text-yellow-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-yellow-200 dark:text-yellow-900">
-                SASS
-              </span>
-              <span className="bg-indigo-100 text-indigo-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-indigo-200 dark:text-indigo-900">
-                Typescript
-              </span>
-              <span className="bg-purple-100 text-purple-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-purple-200 dark:text-purple-900">
-                HTML5
-              </span>
-              <span className="bg-pink-100 text-pink-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-pink-200 dark:text-pink-900">
-                SVG
-              </span>
-            </div>
-          </div>
-        </div>
-        <div className="flex justify-center">
-          <div className="border border-gray-300 rounded-md shadow-md bg-white w-full max-w-sm">
-            <div className="p-2 bg-gray-300">
-              <img className="rounded-md" src="img/templates/view.png" alt="" />
-            </div>
-            <div className="p-3">
-              <h5 className="text-gray-900 text-xl font-medium mb-2">
-                Xbank project
-              </h5>
-
-              <span className="bg-purple-100 text-purple-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-purple-200 dark:text-purple-800">
-                PHP
-              </span>
-              <span className="bg-gray-100 text-gray-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">
-                Vuejs
-              </span>
-              <span className="bg-red-100 text-red-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-red-200 dark:text-red-900">
-                Laravel
-              </span>
-              <span className="bg-green-100 text-green-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-green-200 dark:text-green-900">
-                Bootstrap5
-              </span>
-              <span className="bg-yellow-100 text-yellow-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-yellow-200 dark:text-yellow-900">
-                SASS
-              </span>
-              <span className="bg-indigo-100 text-indigo-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-indigo-200 dark:text-indigo-900">
-                Typescript
-              </span>
-              <span className="bg-purple-100 text-purple-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-purple-200 dark:text-purple-900">
-                HTML5
-              </span>
-              <span className="bg-pink-100 text-pink-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-pink-200 dark:text-pink-900">
-                SVG
-              </span>
-            </div>
-          </div>
-        </div>
-        <div className="flex justify-center">
-          <div className="border border-gray-300 rounded-md shadow-md bg-white w-full max-w-sm">
-            <div className="p-2 bg-gray-300">
-              <img className="rounded-md" src="img/templates/view.png" alt="" />
-            </div>
-            <div className="p-3">
-              <h5 className="text-gray-900 text-xl font-medium mb-2">
-                Xbank project
-              </h5>
-
-              <span className="bg-purple-100 text-purple-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-purple-200 dark:text-purple-800">
-                PHP
-              </span>
-              <span className="bg-gray-100 text-gray-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">
-                Vuejs
-              </span>
-              <span className="bg-red-100 text-red-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-red-200 dark:text-red-900">
-                Laravel
-              </span>
-              <span className="bg-green-100 text-green-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-green-200 dark:text-green-900">
-                Bootstrap5
-              </span>
-              <span className="bg-yellow-100 text-yellow-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-yellow-200 dark:text-yellow-900">
-                SASS
-              </span>
-              <span className="bg-indigo-100 text-indigo-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-indigo-200 dark:text-indigo-900">
-                Typescript
-              </span>
-              <span className="bg-purple-100 text-purple-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-purple-200 dark:text-purple-900">
-                HTML5
-              </span>
-              <span className="bg-pink-100 text-pink-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-pink-200 dark:text-pink-900">
-                SVG
-              </span>
-            </div>
-          </div>
-        </div>
-        <div className="flex justify-center">
-          <div className="border border-gray-300 rounded-md shadow-md bg-white w-full max-w-sm">
-            <div className="p-2 bg-gray-300">
-              <img className="rounded-md" src="img/templates/view.png" alt="" />
-            </div>
-            <div className="p-3">
-              <h5 className="text-gray-900 text-xl font-medium mb-2">
-                Xbank project
-              </h5>
-
-              <span className="bg-purple-100 text-purple-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-purple-200 dark:text-purple-800">
-                PHP
-              </span>
-              <span className="bg-gray-100 text-gray-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">
-                Vuejs
-              </span>
-              <span className="bg-red-100 text-red-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-red-200 dark:text-red-900">
-                Laravel
-              </span>
-              <span className="bg-green-100 text-green-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-green-200 dark:text-green-900">
-                Bootstrap5
-              </span>
-              <span className="bg-yellow-100 text-yellow-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-yellow-200 dark:text-yellow-900">
-                SASS
-              </span>
-              <span className="bg-indigo-100 text-indigo-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-indigo-200 dark:text-indigo-900">
-                Typescript
-              </span>
-              <span className="bg-purple-100 text-purple-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-purple-200 dark:text-purple-900">
-                HTML5
-              </span>
-              <span className="bg-pink-100 text-pink-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-pink-200 dark:text-pink-900">
-                SVG
-              </span>
-            </div>
-          </div>
-        </div>
-        <div className="flex justify-center">
-          <div className="border border-gray-300 rounded-md shadow-md bg-white w-full max-w-sm">
-            <div className="p-2 bg-gray-300">
-              <img className="rounded-md" src="img/templates/view.png" alt="" />
-            </div>
-            <div className="p-3">
-              <h5 className="text-gray-900 text-xl font-medium mb-2">
-                Xbank project
-              </h5>
-
-              <span className="bg-purple-100 text-purple-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-purple-200 dark:text-purple-800">
-                PHP
-              </span>
-              <span className="bg-gray-100 text-gray-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">
-                Vuejs
-              </span>
-              <span className="bg-red-100 text-red-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-red-200 dark:text-red-900">
-                Laravel
-              </span>
-              <span className="bg-green-100 text-green-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-green-200 dark:text-green-900">
-                Bootstrap5
-              </span>
-              <span className="bg-yellow-100 text-yellow-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-yellow-200 dark:text-yellow-900">
-                SASS
-              </span>
-              <span className="bg-indigo-100 text-indigo-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-indigo-200 dark:text-indigo-900">
-                Typescript
-              </span>
-              <span className="bg-purple-100 text-purple-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-purple-200 dark:text-purple-900">
-                HTML5
-              </span>
-              <span className="bg-pink-100 text-pink-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-pink-200 dark:text-pink-900">
-                SVG
-              </span>
-            </div>
-          </div>
-        </div>
-        <div className="flex justify-center">
-          <div className="border border-gray-300 rounded-md shadow-md bg-white w-full max-w-sm">
-            <div className="p-2 bg-gray-300">
-              <img className="rounded-md" src="img/templates/view.png" alt="" />
-            </div>
-            <div className="p-3">
-              <h5 className="text-gray-900 text-xl font-medium mb-2">
-                Xbank project
-              </h5>
-
-              <span className="bg-purple-100 text-purple-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-purple-200 dark:text-purple-800">
-                PHP
-              </span>
-              <span className="bg-gray-100 text-gray-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">
-                Vuejs
-              </span>
-              <span className="bg-red-100 text-red-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-red-200 dark:text-red-900">
-                Laravel
-              </span>
-              <span className="bg-green-100 text-green-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-green-200 dark:text-green-900">
-                Bootstrap5
-              </span>
-              <span className="bg-yellow-100 text-yellow-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-yellow-200 dark:text-yellow-900">
-                SASS
-              </span>
-              <span className="bg-indigo-100 text-indigo-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-indigo-200 dark:text-indigo-900">
-                Typescript
-              </span>
-              <span className="bg-purple-100 text-purple-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-purple-200 dark:text-purple-900">
-                HTML5
-              </span>
-              <span className="bg-pink-100 text-pink-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-pink-200 dark:text-pink-900">
-                SVG
-              </span>
-            </div>
-          </div>
-        </div>
-        <div className="flex justify-center">
-          <div className="border border-gray-300 rounded-md shadow-md bg-white w-full max-w-sm">
-            <div className="p-2 bg-gray-300">
-              <img className="rounded-md" src="img/templates/view.png" alt="" />
-            </div>
-            <div className="p-3">
-              <h5 className="text-gray-900 text-xl font-medium mb-2">
-                Xbank project
-              </h5>
-
-              <span className="bg-purple-100 text-purple-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-purple-200 dark:text-purple-800">
-                PHP
-              </span>
-              <span className="bg-gray-100 text-gray-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">
-                Vuejs
-              </span>
-              <span className="bg-red-100 text-red-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-red-200 dark:text-red-900">
-                Laravel
-              </span>
-              <span className="bg-green-100 text-green-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-green-200 dark:text-green-900">
-                Bootstrap5
-              </span>
-              <span className="bg-yellow-100 text-yellow-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-yellow-200 dark:text-yellow-900">
-                SASS
-              </span>
-              <span className="bg-indigo-100 text-indigo-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-indigo-200 dark:text-indigo-900">
-                Typescript
-              </span>
-              <span className="bg-purple-100 text-purple-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-purple-200 dark:text-purple-900">
-                HTML5
-              </span>
-              <span className="bg-pink-100 text-pink-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-pink-200 dark:text-pink-900">
-                SVG
-              </span>
-            </div>
-          </div>
-        </div>
-        <div className="flex justify-center">
-          <div className="border border-gray-300 rounded-md shadow-md bg-white w-full max-w-sm">
-            <div className="p-2 bg-gray-300">
-              <img className="rounded-md" src="img/templates/view.png" alt="" />
-            </div>
-            <div className="p-3">
-              <h5 className="text-gray-900 text-xl font-medium mb-2">
-                Xbank project
-              </h5>
-
-              <span className="bg-purple-100 text-purple-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-purple-200 dark:text-purple-800">
-                PHP
-              </span>
-              <span className="bg-gray-100 text-gray-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">
-                Vuejs
-              </span>
-              <span className="bg-red-100 text-red-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-red-200 dark:text-red-900">
-                Laravel
-              </span>
-              <span className="bg-green-100 text-green-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-green-200 dark:text-green-900">
-                Bootstrap5
-              </span>
-              <span className="bg-yellow-100 text-yellow-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-yellow-200 dark:text-yellow-900">
-                SASS
-              </span>
-              <span className="bg-indigo-100 text-indigo-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-indigo-200 dark:text-indigo-900">
-                Typescript
-              </span>
-              <span className="bg-purple-100 text-purple-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-purple-200 dark:text-purple-900">
-                HTML5
-              </span>
-              <span className="bg-pink-100 text-pink-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-pink-200 dark:text-pink-900">
-                SVG
-              </span>
-            </div>
-          </div>
-        </div>
+          );
+        })}
       </div>
 
       <div className="flex flex-col items-center mt-10">
