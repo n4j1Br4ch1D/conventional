@@ -37,11 +37,11 @@ function Sponsor() {
           ></path>
         </svg>
       </a>
-
       <a
         className="absolute left-6 bottom-5 inline-flex items-center py-2 px-4 mr-3 text-xs font-medium text-gray-900 bg-white rounded-lg border border-gray-200 focus:outline-none hover:bg-gray-100 hover:text-purple-700 focus:z-10 focus:ring-2 focus:ring-gray-300 dark:focus:ring-gray-500 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
-        href="https://github.com/themesberg/flowbite/blob/main/content/components/buttons.md"
-        rel="noopener nofollow noreferrer"
+        href="https://github.com/n4j1Br4ch1D/conventional"
+        target="_blank"
+        rel="noopener noreferrer"
       >
         <svg
           aria-hidden="true"
