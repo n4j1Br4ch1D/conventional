@@ -19,12 +19,11 @@ function Hero() {
             &amp; teams, using our convention templates generator tool.
             <a
               className="text-purple-700"
-              href="http://"
+              href="https://blog.x-hub.io/importance-of-code-standards-and-conventions/?ref=anmoon-convention-genrator"
               target="_blank"
               rel="noopener noreferrer"
             >
-              {' '}
-              Read More...
+              &nbsp;Read More...
             </a>
           </p>
         </div>
