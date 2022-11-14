@@ -99,7 +99,10 @@ function Templates() {
                   </h5>
                   {template.technologies.map((technology) => {
                     return (
-                      <span className="inline-block bg-gray-500 text-purple-100 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-purple-200 dark:text-purple-900">
+                      <span
+                        key={technology}
+                        className="inline-block bg-gray-500 text-purple-100 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-purple-200 dark:text-purple-900"
+                      >
                         {technology}
                       </span>
                     );
