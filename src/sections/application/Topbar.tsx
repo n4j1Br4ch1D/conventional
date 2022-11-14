@@ -19,7 +19,7 @@ function Topbar() {
   }
 
   return (
-    <div className="topBar">
+    <div className="topBar pb-2">
       <div className="flex justify-between">
         <div>
           <button
