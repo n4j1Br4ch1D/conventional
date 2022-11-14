@@ -3,15 +3,17 @@ function Topbar() {
   let isFullscreen: boolean = false;
 
   function toggleFullscreen(toggle: boolean) {
+    let elem = document.getElementById('apllication-wrapper');
     if (!toggle) {
-      let elem = document.getElementById('apllication-wrapper');
       if (elem?.requestFullscreen) {
         elem.requestFullscreen();
+        elem.style.overflowY = 'scroll';
       }
     } else {
       if (document.exitFullscreen) {
         document.exitFullscreen();
       }
+      elem!.style.overflowY = 'hidden';
     }
     isFullscreen = !isFullscreen;
   }
