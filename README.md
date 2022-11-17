@@ -29,9 +29,9 @@ A Tool that helps you Ensure Coding standards & Code Quality, by helping you sea
 ## Design
 
 <div style="display:flex">
-<img src="/conventional/files/sketch-1.jpg" height="200" width="300"/>
-<img src="/conventional/files/sketch-2.jpg" height="200" width="300"/>
-<img src="/conventional/files/sketch-3.jpg" height="200" width="300"/>
+<img src="https://raw.githubusercontent.com/n4j1Br4ch1D/conventional/dev/files/sketch-1.jpg" height="200" width="300"/>
+<img src="https://raw.githubusercontent.com/n4j1Br4ch1D/conventional/dev/files/sketch-2.jpg" height="200" width="300"/>
+<img src="https://raw.githubusercontent.com/n4j1Br4ch1D/conventional/dev/files/sketch-3.jpg" height="200" width="300"/>
 </div>
 
 ## Breakdown
