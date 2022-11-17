@@ -1,4 +1,8 @@
+import { useAppContext } from '../../contexts/useAppContext';
+
 function Topbar() {
+  const { splitSizes, setSplitSizes } = useAppContext();
+
   // converte to state later;
   let isFullscreen = false;
 
@@ -81,7 +85,12 @@ function Topbar() {
         </div>
         <div>
           <div className="inline-flex">
-            <button className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-l">
+            <button
+              className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-l"
+              onClick={() => {
+                setSplitSizes([99, 1]);
+              }}
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -98,7 +107,12 @@ function Topbar() {
               </svg>
               Code
             </button>
-            <button className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-r">
+            <button
+              className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-r"
+              onClick={() => {
+                setSplitSizes([1, 99]);
+              }}
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -119,6 +133,9 @@ function Topbar() {
             <button
               type="button"
               className="ml-2 text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:outline-none focus:ring-purple-300 font-medium rounded-lg text-sm p-2.5 text-center inline-flex items-center mr-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-800"
+              onClick={() => {
+                setSplitSizes([50, 50]);
+              }}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
