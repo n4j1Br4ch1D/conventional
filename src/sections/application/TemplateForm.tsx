@@ -1,6 +1,21 @@
+import Multiselect from 'multiselect-react-dropdown';
+import { useState } from 'react';
+
 function TemplateForm() {
+  const [technlogies, setTechnlogies] = useState([
+    { id: 1, name: 'JAVA' },
+    { id: 2, name: 'Typescript' },
+    { id: 3, name: 'React' },
+    { id: 4, name: 'PHP' },
+  ]);
+
+  const [selectedTechnlogies, setSelectedTechnlogies] = useState([
+    { id: 1, name: 'JAVA' },
+    { id: 2, name: 'Typescript' },
+  ]);
+
   return (
-    <div className="new text-center">
+    <div className="new text-left">
       <div className="p-8 rounded border-dashed border-2 border-gray-300">
         <div className="mb-6">
           <label
@@ -12,8 +27,8 @@ function TemplateForm() {
           <input
             type="text"
             id="username-success"
-            className="bg-green-50 border border-gray-300 text-gray-900 placeholder-gray-400 text-sm rounded-lg focus:ring-gray-500 focus:border-gray-500 block w-full p-2.5 dark:bg-green-100 dark:border-green-400"
-            placeholder="Bonnie Green"
+            className="bg-gray-50 border border-gray-300 text-gray-900 placeholder-gray-400 text-sm rounded-lg focus:ring-gray-500 focus:border-gray-500 block w-full p-2.5 dark:bg-gray-100 dark:border-gray-400"
+            placeholder="My Project Conventions"
           />
         </div>
 
@@ -24,6 +39,22 @@ function TemplateForm() {
           >
             Select Technlogies
           </label>
+          <Multiselect
+            options={technlogies}
+            selectedValues={selectedTechnlogies}
+            displayValue="name"
+            style={{
+              chips: {
+                background: '#7e22ce',
+              },
+              option: {
+                background: '#7e22ce',
+              },
+              searchBox: {
+                'border-radius': '8px',
+              },
+            }}
+          />
         </div>
 
         <div className="mb-6">
@@ -33,8 +64,13 @@ function TemplateForm() {
           >
             Some Description
           </label>
+          <textarea
+            id="message"
+            rows={4}
+            className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            placeholder="Write your description here..."
+          ></textarea>
         </div>
-
         <div className="mb-6">
           <button
             type="button"
