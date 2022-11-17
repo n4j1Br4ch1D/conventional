@@ -1,8 +1,11 @@
+import { useAppContext } from '../contexts/useAppContext';
+
 function Hero() {
-  const scrollToAppView = () => {
-    //view :String
+  const { setCurrentPanel } = useAppContext();
+  const scrollToAppView = (panel: string) => {
     const element = document.getElementById('apllication-wrapper');
     if (element) element.scrollIntoView({ behavior: 'smooth' });
+    setCurrentPanel(panel);
   };
 
   return (
@@ -29,7 +32,9 @@ function Hero() {
         </div>
         <div className="flex justify-center items-center">
           <button
-            onClick={scrollToAppView}
+            onClick={() => {
+              scrollToAppView('templateForm');
+            }}
             className="mr-4 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 hidden md:block bg-transparent transition duration-150 ease-in-out hover:bg-gray-200 focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 bg-transparent transition duration-150 ease-in-out hover:border-indigo-600 lg:text-xl lg:font-bold  hover:text-indigo-600 rounded border border-indigo-700 text-indigo-700 px-4 sm:px-10 py-2 sm:py-4 text-sm"
           >
             <svg
@@ -50,10 +55,21 @@ function Hero() {
           </button>
 
           <button
-            onClick={scrollToAppView}
+            onClick={() => {
+              scrollToAppView('templates');
+            }}
             className="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-700 bg-purple-700 transition duration-150 ease-in-out hover:bg-indigo-600 lg:text-xl lg:font-bold  rounded text-white px-4 sm:px-10 border border-indigo-700 py-2 sm:py-4 text-sm"
           >
             Explore Templates
+          </button>
+
+          <button
+            onClick={() => {
+              scrollToAppView('editor');
+            }}
+            className="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-700 bg-purple-700 transition duration-150 ease-in-out hover:bg-indigo-600 lg:text-xl lg:font-bold  rounded text-white px-4 sm:px-10 border border-indigo-700 py-2 sm:py-4 text-sm"
+          >
+            Editor (temp btn)
           </button>
         </div>
       </div>
