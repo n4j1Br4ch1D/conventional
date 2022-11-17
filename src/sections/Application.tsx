@@ -17,7 +17,7 @@ function Application() {
 
   return (
     <div id="apllication-wrapper" className="pt-1">
-      <section className="flex bg-white border border-purple-900 mx-2 rounded-md shadow-md section relative overflow-hidden">
+      <section className="flex h-i bg-white border border-purple-900 mx-2 rounded-md shadow-md section relative overflow-hidden">
         <Sidebar />
         <div className="w-3/4 p-2">{panel}</div>
       </section>
